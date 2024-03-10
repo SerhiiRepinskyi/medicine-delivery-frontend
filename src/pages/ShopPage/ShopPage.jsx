@@ -1,8 +1,12 @@
+import { Container } from "./ShopPage.styled";
+
 const ShopPage = () => {
   return (
-    <>
-      <h2>==Shop Page==</h2>
-    </>
+    <section>
+      <Container>
+        <h2>==Shop Page==</h2>
+      </Container>
+    </section>
   );
 };
 

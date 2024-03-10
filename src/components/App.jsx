@@ -9,8 +9,6 @@ const ShoppingCartPage = lazy(() =>
 const HistoryPage = lazy(() => import("../pages/HistoryPage/HistoryPage"));
 const CouponsPage = lazy(() => import("../pages/CouponsPage/CouponsPage"));
 
-import "./App.css";
-
 function App() {
   return (
     <>

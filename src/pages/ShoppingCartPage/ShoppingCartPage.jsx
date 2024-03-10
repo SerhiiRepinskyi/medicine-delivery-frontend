@@ -1,8 +1,12 @@
+import { Container } from "./ShoppingCartPage.styled";
+
 const ShoppingCartPage = () => {
   return (
-    <>
-      <h2>==Shopping Cart Page==</h2>
-    </>
+    <section>
+      <Container>
+        <h2>==Shopping Cart Page==</h2>
+      </Container>
+    </section>
   );
 };
 

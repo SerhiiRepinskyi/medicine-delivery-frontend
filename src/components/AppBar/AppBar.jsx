@@ -1,16 +1,15 @@
 import Navigation from "../Navigation";
-import { Link } from "react-router-dom";
-// import { Header, ContainerHeader, LinkStyled } from "./AppBar.styled";
+import { Header, ContainerHeader, LinkStyled } from "./AppBar.styled";
 
 const AppBar = () => {
   return (
-    <header>
-      <div>
+    <Header>
+      <ContainerHeader>
         <Navigation />
 
-        <Link to="/">Shop - Button</Link>
-      </div>
-    </header>
+        <LinkStyled to="/">Shop</LinkStyled>
+      </ContainerHeader>
+    </Header>
   );
 };
 

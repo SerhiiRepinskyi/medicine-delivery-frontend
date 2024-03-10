@@ -1,8 +1,12 @@
+import { Container } from "./HistoryPage.styled";
+
 const HistoryPage = () => {
   return (
-    <>
-      <h2>==History Page==</h2>
-    </>
+    <section>
+      <Container>
+        <h2>==History Page==</h2>
+      </Container>
+    </section>
   );
 };
 
