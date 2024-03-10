@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/training-shuttle-cssmodules",
+  base: "/medicine-delivery-frontend",
   plugins: [react()],
 });
