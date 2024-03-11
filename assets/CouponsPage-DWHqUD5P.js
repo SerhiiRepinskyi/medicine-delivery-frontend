@@ -1,4 +1,4 @@
-import{u as o,j as n}from"./index-BI3bjk9d.js";const t=o.div`
+import{u as o,j as n}from"./index-4yXT2-Wa.js";const t=o.div`
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 70px;
