@@ -51,11 +51,6 @@ export const BtnFavorite = styled.button`
   }
 `;
 
-export const SvgStyled = styled.svg`
-  stroke: currentColor;
-  fill: currentColor;
-`;
-
 export const BtnDelCart = styled.button`
   cursor: pointer;
 

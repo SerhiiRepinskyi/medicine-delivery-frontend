@@ -6,13 +6,11 @@ import {
   removeFromFavorites,
   addToListCart,
 } from "../../redux/drugsSlice";
-
-import icon from "../../assets/sprite-icons.svg";
+import HeartIcon from "../HeartIcon/HeartIcon";
 import {
   DivImgStyled,
   ImgStyled,
   BtnFavorite,
-  SvgStyled,
   BtnAddCart,
 } from "./DrugCard.styled";
 
@@ -50,8 +48,6 @@ const DrugCard = ({ drug }) => {
     }
   };
 
-  const favoriteIcon = drugIsFavorite ? "heart-active" : "heart-normal";
-
   return (
     <div>
       <DivImgStyled>
@@ -63,9 +59,7 @@ const DrugCard = ({ drug }) => {
             drugIsFavorite ? "Remove from favorites" : "Add to favorites"
           }
         >
-          <SvgStyled width="18" height="18">
-            <use href={`${icon}#${favoriteIcon}`}></use>
-          </SvgStyled>
+          <HeartIcon isActive={drugIsFavorite} />
         </BtnFavorite>
       </DivImgStyled>
 
