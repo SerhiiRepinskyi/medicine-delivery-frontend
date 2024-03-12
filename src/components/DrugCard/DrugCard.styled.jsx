@@ -62,7 +62,7 @@ export const BtnAddCart = styled.button`
   width: 100%;
   max-width: 274px;
   height: 36px;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,5 +84,10 @@ export const BtnAddCart = styled.button`
   &:hover,
   &:focus {
     background-color: var(--accent-hover-color);
+  }
+
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
   }
 `;
