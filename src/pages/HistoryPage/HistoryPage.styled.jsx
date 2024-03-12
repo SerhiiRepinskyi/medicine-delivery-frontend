@@ -6,6 +6,6 @@ export const Container = styled.div`
   margin-top: 70px;
   padding: 150px 8px 150px;
 
-  outline: 2px solid red;
+  // outline: 2px solid red;
   // outline - рамка для обведення контенту
 `;
