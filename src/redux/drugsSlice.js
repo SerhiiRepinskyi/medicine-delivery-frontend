@@ -8,6 +8,7 @@ const drugsInitialState = {
   isLoading: false,
   error: null,
   selectedShop: "",
+  listCart: [],
 };
 
 const handlePending = (state) => {
@@ -37,9 +38,21 @@ const drugsSlice = createSlice({
 
     removeFromFavorites: (state, action) => {
       state.favoriteDrugs = state.favoriteDrugs.filter(
-        (drug) => drug.id !== action.payload.id
+        (drug) => drug._id !== action.payload._id
       );
-      Notify.success("Removed from favorites");
+      Notify.failure("Removed from favorites");
+    },
+
+    addToListCart: (state, action) => {
+      state.listCart = [...state.listCart, action.payload];
+      Notify.success("Added to Shopping Cart");
+    },
+
+    removeFromListCart: (state, action) => {
+      state.listCart = state.listCart.filter(
+        (drug) => drug._id !== action.payload._id
+      );
+      Notify.failure("Removed from Shopping Cart");
     },
   },
 
@@ -55,6 +68,11 @@ const drugsSlice = createSlice({
   },
 });
 
-export const { setSelectedShop, addToFavorites, removeFromFavorites } =
-  drugsSlice.actions;
+export const {
+  setSelectedShop,
+  addToFavorites,
+  removeFromFavorites,
+  addToListCart,
+  removeFromListCart,
+} = drugsSlice.actions;
 export const drugsReducer = drugsSlice.reducer;
