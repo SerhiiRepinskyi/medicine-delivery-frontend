@@ -1,4 +1,12 @@
-# React + Vite
+# Medicine Delivery APP
+
+https://serhiirepinskyi.github.io/medicine-delivery-frontend/
+
+# Medicine Delivery BackEnd
+
+https://github.com/SerhiiRepinskyi/medicine-delivery-backend
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
