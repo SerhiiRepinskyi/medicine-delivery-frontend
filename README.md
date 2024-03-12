@@ -6,6 +6,8 @@ https://serhiirepinskyi.github.io/medicine-delivery-frontend/
 
 https://github.com/SerhiiRepinskyi/medicine-delivery-backend
 
+The backend is hosted on render.com, so you need to wait some time after running the APP!!!
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
