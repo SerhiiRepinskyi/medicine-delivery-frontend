@@ -18,7 +18,13 @@ const drugsPersistConfig = {
   key: "drugs", // Назва ключа в LocalStorage
   version: 1,
   storage,
-  whitelist: ["listDrugs", "selectedShop", "favoriteDrugs", "listCart"],
+  whitelist: [
+    "listDrugs",
+    "selectedShop",
+    "favoriteDrugs",
+    "listCart",
+    "quantityById",
+  ],
 };
 
 export const store = configureStore({

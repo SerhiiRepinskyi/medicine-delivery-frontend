@@ -9,6 +9,7 @@ const drugsInitialState = {
   error: null,
   selectedShop: "",
   listCart: [],
+  quantityById: {},
 };
 
 const handlePending = (state) => {
@@ -54,6 +55,11 @@ const drugsSlice = createSlice({
       );
       Notify.failure("Removed from Shopping Cart");
     },
+
+    setQuantity: (state, action) => {
+      const { drugId, quantity } = action.payload;
+      state.quantityById[drugId] = quantity;
+    },
   },
 
   extraReducers: (builder) => {
@@ -74,5 +80,6 @@ export const {
   removeFromFavorites,
   addToListCart,
   removeFromListCart,
+  setQuantity,
 } = drugsSlice.actions;
 export const drugsReducer = drugsSlice.reducer;
