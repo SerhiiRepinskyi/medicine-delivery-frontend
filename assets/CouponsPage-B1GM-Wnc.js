@@ -1,4 +1,4 @@
-import{u as i,j as t}from"./index-CkDF9v_h.js";const n=i.div`
+import{u as o,j as n}from"./index-D_41hrYv.js";const t=o.div`
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 70px;
@@ -6,4 +6,4 @@ import{u as i,j as t}from"./index-CkDF9v_h.js";const n=i.div`
 
   // outline: 2px solid red;
   // outline - рамка для обведення контенту
-`,r=()=>t.jsx("section",{children:t.jsx(n,{children:t.jsx("h2",{children:"==History Page=="})})});export{r as default};
+`,e=()=>n.jsx("section",{children:n.jsx(t,{children:n.jsx("h2",{children:"==Coupons Page=="})})});export{e as default};
