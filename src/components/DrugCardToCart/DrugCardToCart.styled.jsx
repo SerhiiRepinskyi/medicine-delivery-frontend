@@ -51,7 +51,47 @@ export const BtnFavorite = styled.button`
   }
 `;
 
-export const BtnDelCart = styled.button`
+export const DivQuantity = styled.div`
+  display: flex;
+  // gap: 2px;
+  align-content: center;
+  justify-content: center;
+
+  margin: 6px auto;
+`;
+
+export const BtnDecInc = styled.button`
+  cursor: pointer;
+
+  width: 28px;
+  height: 24px;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+
+  border-radius: 8px;
+  border: none;
+
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-hover-color);
+  }
+`;
+
+export const InputQuantity = styled.input`
+  width: 50px;
+  height: 24px;
+
+  text-align: center;
+  background-color: ;
+`;
+
+export const BtnDelFromCart = styled.button`
   cursor: pointer;
 
   width: 100%;
