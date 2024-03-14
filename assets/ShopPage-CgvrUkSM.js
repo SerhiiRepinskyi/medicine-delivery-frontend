@@ -1,4 +1,4 @@
-import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}from"./index-D_41hrYv.js";import{s as S,a as D,H as A,b as T,c as L,d as E,e as F}from"./HeartIcon-DUvb_TNm.js";const I=r.div`
+import{u as o,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}from"./index-BvncnX4U.js";import{s as S,a as D,H as A,b as T,c as L,d as E,e as F}from"./HeartIcon-Fcs8BdCW.js";const I=o.div`
   width: 274px;
   height: 210px;
 
@@ -16,11 +16,11 @@ import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}fro
     #f3f3f2;
 
   overflow: hidden;
-`,_=r.img`
+`,_=o.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`,P=r.button`
+`,P=o.button`
   position: absolute;
   top: 14px;
   right: 14px;
@@ -43,7 +43,7 @@ import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}fro
   &:focus {
     transform: scale(1.3);
   }
-`,$=r.button`
+`,$=o.button`
   cursor: pointer;
 
   width: 100%;
@@ -77,7 +77,7 @@ import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}fro
     background-color: gray;
     cursor: not-allowed;
   }
-`,z=({drug:t})=>{const i=u(),c=a(S),l=a(D),[o,s]=g.useState(!1),{name:d,price:n,foto:f}=t;g.useEffect(()=>{const h=l.some(b=>b._id===t._id);s(h)},[l,t._id]);const p=c.some(h=>h._id===t._id),v=()=>{i(p?j(t):y(t))},m=()=>{o||(i(w(t)),s(!0))};return e.jsxs("div",{children:[e.jsxs(I,{children:[e.jsx(_,{src:f,alt:d}),e.jsx(P,{type:"button",onClick:v,"aria-label":p?"Remove from favorites":"Add to favorites",children:e.jsx(A,{isActive:p})})]}),e.jsxs("p",{children:["Name: ",d]}),e.jsxs("p",{children:["Price: ",n]}),e.jsx($,{type:"button",onClick:m,disabled:o,children:"add to Cart"})]})},B=r.div`
+`,z=({drug:t})=>{const i=u(),c=a(S),l=a(D),[r,s]=g.useState(!1),{name:d,price:n,foto:f}=t;g.useEffect(()=>{const x=l.some(b=>b._id===t._id);s(x)},[l,t._id]);const p=c.some(x=>x._id===t._id),v=()=>{i(p?j(t):y(t))},m=()=>{r||(i(w(t)),s(!0))};return e.jsxs("div",{children:[e.jsxs(I,{children:[e.jsx(_,{src:f,alt:d}),e.jsx(P,{type:"button",onClick:v,"aria-label":p?"Remove from favorites":"Add to favorites",children:e.jsx(A,{isActive:p})})]}),e.jsxs("p",{children:["Name: ",d]}),e.jsxs("p",{children:["Price: ",n]}),e.jsx($,{type:"button",onClick:m,disabled:r,children:r?"added to Cart":"add to Cart"})]})},B=o.div`
   max-width: 1200px;
   display: flex;
   gap: 20px;
@@ -88,7 +88,7 @@ import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}fro
 
   // outline: 2px solid red;
   // outline - рамка для обведення контенту
-`,R=r.div`
+`,R=o.div`
   min-width: 215px;
   height: 740px;
 
@@ -97,27 +97,27 @@ import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}fro
   flex-direction: column;
   align-items: center;
 
-  padding: 32px;
+  padding: 32px 16px;
 
   border: 2px solid var(--primary-grey-color);
   border-radius: 14px;
-`,H=r.div`
+`,H=o.div`
   flex-grow: 1;
   height: 740px;
 
-  padding: 32px;
+  padding: 32px 16px;
 
   overflow-y: auto;
 
   border: 2px solid var(--primary-grey-color);
   border-radius: 14px;
-`,W=r.ul`
+`,W=o.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   row-gap: 50px;
   column-gap: 20px;
-`,x=r.button`
+`,h=o.button`
   cursor: pointer;
 
   width: 100%;
@@ -147,4 +147,4 @@ import{u as r,a as u,b as a,r as g,j as e,c as j,d as y,e as w,f as k,s as C}fro
   }
 
   background-color: ${t=>t.$isActive?"var(--accent-active-color)":"var(--accent-color)"};
-`,G=()=>{const t=u(),i=a(T),c=a(L),l=a(E),o=a(F);g.useEffect(()=>{t(k(o))},[t,o]);const s=n=>{t(C(n))},d=i.length>0;return e.jsx("section",{children:e.jsxs(B,{children:[e.jsxs(R,{children:[e.jsx("h3",{children:"Shops:"}),e.jsx(x,{onClick:()=>s("Drugs 24"),$isActive:o==="Drugs 24",children:"Drugs 24"}),e.jsx(x,{onClick:()=>s("Pharmacy"),$isActive:o==="Pharmacy",children:"Pharmacy"}),e.jsx(x,{onClick:()=>s("E-Tabletka"),$isActive:o==="E-Tabletka",children:"E-Tabletka"}),e.jsx("div",{children:"etc..."})]}),e.jsxs(H,{children:[d&&e.jsx(W,{children:i.map(n=>e.jsx("li",{children:e.jsx(z,{drug:n})},n._id))}),!d&&e.jsx("div",{style:{textAlign:"center",fontSize:"16px",fontWeight:500,margin:"100px auto 0"},children:"There are no drugs in the store yet!"}),l&&!c&&e.jsx("div",{style:{textAlign:"center",fontSize:"16px",fontWeight:500,margin:"100px auto 0"},children:"Request in progress..."}),c&&c]})]})})};export{G as default};
+`,G=()=>{const t=u(),i=a(T),c=a(L),l=a(E),r=a(F);g.useEffect(()=>{t(k(r))},[t,r]);const s=n=>{t(C(n))},d=i.length>0;return e.jsx("section",{children:e.jsxs(B,{children:[e.jsxs(R,{children:[e.jsx("h3",{children:"Shops:"}),e.jsx(h,{onClick:()=>s("Drugs 24"),$isActive:r==="Drugs 24",children:"Drugs 24"}),e.jsx(h,{onClick:()=>s("Pharmacy"),$isActive:r==="Pharmacy",children:"Pharmacy"}),e.jsx(h,{onClick:()=>s("E-Tabletka"),$isActive:r==="E-Tabletka",children:"E-Tabletka"}),e.jsx("div",{children:"etc..."})]}),e.jsxs(H,{children:[d&&e.jsx(W,{children:i.map(n=>e.jsx("li",{children:e.jsx(z,{drug:n})},n._id))}),l&&!c&&e.jsx("div",{style:{textAlign:"center",fontSize:"16px",fontWeight:500,margin:"100px auto 0"},children:"Request in progress..."}),c&&c,!d&&e.jsx("div",{style:{textAlign:"center",fontSize:"16px",fontWeight:500,margin:"100px auto 0"},children:"There are no drugs in the store yet!"})]})]})})};export{G as default};
