@@ -9,7 +9,6 @@ const drugsInitialState = {
   error: null,
   selectedShop: "",
   listCart: [],
-  quantityById: {},
 };
 
 const handlePending = (state) => {
@@ -45,7 +44,11 @@ const drugsSlice = createSlice({
     },
 
     addToListCart: (state, action) => {
-      state.listCart = [...state.listCart, action.payload];
+      const newItem = {
+        ...action.payload,
+        quantityUser: 1,
+      };
+      state.listCart = [...state.listCart, newItem];
       Notify.success("Added to Shopping Cart");
     },
 
@@ -56,9 +59,12 @@ const drugsSlice = createSlice({
       Notify.failure("Removed from Shopping Cart");
     },
 
-    setQuantity: (state, action) => {
-      const { drugId, quantity } = action.payload;
-      state.quantityById[drugId] = quantity;
+    updateQuantityInCart: (state, action) => {
+      const { drugId, quantityUser } = action.payload;
+      const index = state.listCart.findIndex((drug) => drug._id === drugId);
+      if (index !== -1) {
+        state.listCart[index] = { ...state.listCart[index], quantityUser };
+      }
     },
   },
 
@@ -80,6 +86,6 @@ export const {
   removeFromFavorites,
   addToListCart,
   removeFromListCart,
-  setQuantity,
+  updateQuantityInCart,
 } = drugsSlice.actions;
 export const drugsReducer = drugsSlice.reducer;
