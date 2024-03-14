@@ -22,7 +22,7 @@ export const DivShops = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 32px;
+  padding: 32px 16px;
 
   border: 2px solid var(--primary-grey-color);
   border-radius: 14px;
@@ -32,7 +32,7 @@ export const DivDrugs = styled.div`
   flex-grow: 1;
   height: 740px;
 
-  padding: 32px;
+  padding: 32px 16px;
 
   overflow-y: auto;
 

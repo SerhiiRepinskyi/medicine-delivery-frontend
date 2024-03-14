@@ -74,19 +74,6 @@ const ShopPage = () => {
             </ListDrugs>
           )}
 
-          {!isShowList && (
-            <div
-              style={{
-                textAlign: "center",
-                fontSize: "16px",
-                fontWeight: 500,
-                margin: "100px auto 0",
-              }}
-            >
-              There are no drugs in the store yet!
-            </div>
-          )}
-
           {isLoading && !error && (
             <div
               style={{
@@ -100,6 +87,19 @@ const ShopPage = () => {
             </div>
           )}
           {error && error}
+
+          {!isShowList && (
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "16px",
+                fontWeight: 500,
+                margin: "100px auto 0",
+              }}
+            >
+              There are no drugs in the store yet!
+            </div>
+          )}
         </DivDrugs>
       </Container>
     </section>

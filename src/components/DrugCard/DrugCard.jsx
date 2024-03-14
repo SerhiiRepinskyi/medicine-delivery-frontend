@@ -70,7 +70,7 @@ const DrugCard = ({ drug }) => {
         onClick={handleAddToListCart}
         disabled={addedToCart}
       >
-        add to Cart
+        {!addedToCart ? "add to Cart" : "added to Cart"}
       </BtnAddCart>
     </div>
   );
