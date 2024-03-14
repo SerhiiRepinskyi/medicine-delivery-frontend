@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectFavoriteDrugs, selectQuantityById } from "../../redux/selectors";
+import { selectFavoriteDrugs, selectListCart } from "../../redux/selectors";
 import {
   addToFavorites,
   removeFromFavorites,
   removeFromListCart,
-  setQuantity,
+  updateQuantityInCart,
 } from "../../redux/drugsSlice";
 import HeartIcon from "../HeartIcon/HeartIcon";
 import {
@@ -20,7 +20,10 @@ import {
 const DrugCardToCart = ({ drug }) => {
   const dispatch = useDispatch();
   const favoriteDrugs = useSelector(selectFavoriteDrugs);
-  const quantity = useSelector((state) => selectQuantityById(state, drug._id));
+  const listCart = useSelector(selectListCart);
+
+  const cartItem = listCart.find((item) => item._id === drug._id) || {};
+  const quantity = cartItem.quantityUser || 1;
 
   const { name, price, shop, foto } = drug;
 
@@ -45,7 +48,9 @@ const DrugCardToCart = ({ drug }) => {
     handleQuantityChange(Math.max(quantity - 1, 1));
 
   const handleQuantityChange = (newQuantity) => {
-    dispatch(setQuantity({ drugId: drug._id, quantity: newQuantity }));
+    dispatch(
+      updateQuantityInCart({ drugId: drug._id, quantityUser: newQuantity })
+    );
   };
 
   return (

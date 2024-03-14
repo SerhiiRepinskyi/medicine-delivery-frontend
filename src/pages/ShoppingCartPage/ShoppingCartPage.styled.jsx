@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1200px;
-  display: flex;
-  gap: 20px;
 
   margin: 0 auto;
   margin-top: 70px;
@@ -13,16 +11,21 @@ export const Container = styled.div`
   // outline - рамка для обведення контенту
 `;
 
+export const DivWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
 export const FormStyled = styled.form`
   min-width: 400px;
-  height: 740px;
+  height: 670px;
 
   display: flex;
   gap: 20px;
   flex-direction: column;
   align-items: center;
 
-  padding: 8px;
+  padding: 32px 16px;
 
   border: 2px solid var(--primary-grey-color);
   border-radius: 14px;
@@ -30,9 +33,9 @@ export const FormStyled = styled.form`
 
 export const DivDrugsCart = styled.div`
   flex-grow: 1;
-  height: 740px;
+  height: 670px;
 
-  padding: 32px;
+  padding: 32px 16px;
 
   overflow-y: auto;
 
@@ -76,4 +79,13 @@ export const ListDrugs = styled.ul`
   justify-content: space-around;
   row-gap: 50px;
   column-gap: 20px;
+`;
+
+export const DivSubmit = styled.div`
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin-top: 30px;
 `;
